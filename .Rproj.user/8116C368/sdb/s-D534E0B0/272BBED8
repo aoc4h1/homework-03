@@ -1,0 +1,18 @@
+{
+    "contents" : "\n#---------------------------IV.1 feladat---------------------------\n# Hozz létre egy 50 soros, 10 oszlopos mátrixot, aminek az értékei normális \n# eloszlásból származnak. Minden sor szórása legyen egyenlő a sor számával.\n\nmatrix <- matrix(rnorm(500), nrow = 50, ncol = 10)\nmatrix\n\nfor (i in 1:nrow(matrix)) {\n  sd(matrix[i]) <- (matrix[i, ])\n}\n\nmatrix_sd\n\n\n\n\n#---------------------------IV.2 feladat---------------------------\n# Számold ki for ciklussal minden sor szórását! A végeredmény legyen egy vektor.\n\n\n#---------------------------IV.3 feladat---------------------------\n# Számold ki az apply függvénycsalád egy tagjával minden sor szórását! \n# A végeredmény legyen egy vektor.\n\n\n#---------------------------IV.4 feladat---------------------------\n# Normalizáld a mátrix értékeit -1-től 1-ig tartó intervallumra és \n# nézd meg a sorok átlagát!\n",
+    "created" : 1490219929134.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "692256500",
+    "id" : "272BBED8",
+    "lastKnownWriteTime" : 13229830726811756,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

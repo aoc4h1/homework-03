@@ -1,0 +1,17 @@
+{
+    "contents" : "\n#########################\n# Házi feladat 2        #\n# Programozás I.        #\n# 2016/17. II. félév    #\n# Mogyorósi Pálma       #\n# 2017.03.14.           #\n#########################\n\n#---------------------------II.01 feladat---------------------------\n# Hívd be a előző háziban is használt fivethirtyeight package-et! \n# Olvasd be a comic_characters datasetet!\n\ninstall.packages(\"fivethirtyeight\")\n# Package behívása\nrequire(\"fivethirtyeight\")\n\ndata(comic_characters)\ncomic_characters\n\n# Függvények behívása\nsource(\"src/homework-02-functions.R\")\n\n#---------------------------II.02 feladat---------------------------\n# A data frame-ben van egy name nevű oszlop. \n# Ezt alakítsd át úgy, hogy minden karakternek csak az elsődleges neve \n# maradjon ott mindenféle zárójeles rész nélkül. \n# Például “Spider-Man (Peter Parker)” helyett “Spider-Man”, \n# “Benjamin Grimm (Earth-616)” helyett “Benjamin Grimm” maradjon. \n# Ehhez segítségedül lehet az strsplit függvény.\n\n\n# Az első nyitó zárójel előtti tartalom leválasztása\ncomic_characters$name <- substring(comic_characters$name,1,\n  regexpr(\"(\",comic_characters$name,fixed=T)-2)\n\n\n#---------------------------II.03 feladat---------------------------\n# Kész a függvény\nget_gender\n\n#---------------------------II.04 feladat---------------------------\n# Nézd meg az előzőleg írt get_gender függvénnyel, \n# hogy milyen genderű Thor, Katherine Pryde és Loki Laufeyson!\n\nget_gender(\"Thor\")\nget_gender(\"Katherine Pryde\")\nget_gender(\"Loki Laufeyson\")\n\n#---------------------------II.05 feladat---------------------------\n# Kész a függvény\nget_aligns\n\n#---------------------------II.06 feladat---------------------------\n# Kérd le az előzőleg megírt get_aligns függvénnyel a “Bad Characters” \n# és a “Good Characters” értékekhez tartozó neveket.\n\nget_aligns(\"Bad Characters\")\nget_aligns(\"Good Characters\")\n\n# Vége\n",
+    "created" : 1490209859525.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "697968094",
+    "id" : "44AFD3A3",
+    "lastKnownWriteTime" : 1490209178,
+    "path" : "D:/ELTE Survey/2. félév/Programozás I/homework-02/src/homework-02.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,18 +1,18 @@
 {
-    "contents" : "#########################\n# Házi feladat 3        #\n# Programozás I.        #\n# 2016/17. II. félév    #\n# Mogyorósi Pálma       #\n# 2017.03.22.           #\n#########################\n\n",
+    "contents" : "#########################\n# Házi feladat 3        #\n# Programozás I.        #\n# 2016/17. II. félév    #\n# Mogyorósi Pálma       #\n# 2017.03.22.           #\n#########################\n\n#---------------------------II.01 feladat---------------------------\n# Készíts egy listát, ami 5 vektort tartalmaz. Mindegyik vektor hossza legyen \n# egy véletlenszerű 10 és 20 közötti szám. \n# A vektorok (1,2) intervallumon egyenletes eloszlásból származzanak.\n\n#A lista hossza:\nn <- 5\n\n#A vektor minimális és maximális hossza:\nv_min <- 10\nv_max <- 20\n\nlista <- NA\n\nfor (i in 1:n)\n{\n  #Az i. vektor hossza:\n  j<-sample(v_min:v_max,1)\n  lista[i]<-list(runif(j,min=1,max=2))\n}\n\nlista\n\n#---------------------------II.02 feladat---------------------------\n# Nézd meg for ciklussal, hogy az előbb létrehozott listának milyen \n# hosszúak az elemei! A végeredmény legyen egy vektor.\n\nfor (i in 1:n)\n{\n  j[i]<-sample(v_min:v_max,1)\n  lista[i]<-list(runif(j[i],min=1,max=2))\n}  \n\nlista\n\nhossz_vektor <- j\nhossz_vektor\n\n#---------------------------II.03 feladat---------------------------\n# Nézd meg az apply függvénycsalád egy tagjával, hogy a \n# listának milyen hosszúak az elemei! A végeredmény legyen egy lista.\n\nhossz_lista <- list(lapply(lista, length))\n\n#---------------------------II.04 feladat---------------------------\n# Nézd meg az apply függvénycsalád egy tagjával, hogy a listának milyen \n# hosszúak az elemei! A végeredmény legyen egy vektor.\n\nhossz_vektor_sapply <- sapply(lista, length, simplify = TRUE)\nhossz_vektor_sapply\n\n#---------------------------III.01 feladat---------------------------\n# Hívd be a chickwts datasetet, amit az R alapból tartalmaz.\n\ndata(\"chickwts\")\nchickwts\nhead(chickwts)\n\n#---------------------------III.02 feladat---------------------------\n# Nézd meg, mennyi az átlagsúlya a különbözőképp táplált csirkéknek! \n# Használd az aggregate függvényt!\n  \ndf <- aggregate(chickwts$weight, by = list(feed = chickwts$feed), mean)\ndf\n\n#---------------------------III.3 eladat---------------------------\n# Az előbb kapott aggregált data frame-et rendezd az átlagsúly szerint \n# csökkenő sorrendbe!\n\ndf <- df[order(df$x, decreasing = TRUE), ]\n\n\n",
     "created" : 1490209606799.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "179095104",
+    "hash" : "1443678330",
     "id" : "2A59B0C7",
-    "lastKnownWriteTime" : 1490209674,
+    "lastKnownWriteTime" : 1490219953,
     "path" : "D:/ELTE Survey/2. félév/Programozás I/homework-03/src/homework-03.R",
     "project_path" : "src/homework-03.R",
     "properties" : {
         "tempName" : "Untitled1"
     },
-    "relative_order" : 1,
+    "relative_order" : 2,
     "source_on_save" : false,
     "type" : "r_source"
 }

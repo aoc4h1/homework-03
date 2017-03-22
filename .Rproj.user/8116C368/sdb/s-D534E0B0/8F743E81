@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1490219198321.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8F743E81",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "dboxflj36u",
+        "caption" : "matrix",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=matrix&cache_key=dboxflj36u",
+        "displayedObservations" : "50",
+        "environment" : "",
+        "object" : "matrix",
+        "totalObservations" : "50",
+        "variables" : "10"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
