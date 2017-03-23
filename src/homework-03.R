@@ -77,4 +77,47 @@ df
 
 df <- df[order(df$x, decreasing = TRUE), ]
 
+#---------------------------IV.1 feladat---------------------------
+# Hozz létre egy 50 soros, 10 oszlopos mátrixot, aminek az értékei normális 
+# eloszlásból származnak. Minden sor szórása legyen egyenlő a sor számával.
+
+#A mátrix:
+m_sor <- 50
+m_osz <- 10
+m <- matrix(NA, nrow = m_sor, ncol = m_osz)
+
+#Az értékek:
+for (i in 1:m_sor) {
+  m[i, ] <- rnorm(m_osz, mean=0, sd=i)
+}
+
+
+#---------------------------IV.2 feladat---------------------------
+# Számold ki for ciklussal minden sor szórását! A végeredmény legyen egy vektor.
+
+for (i in 1:m_sor)
+  m_sd_sor[i] <- sd(m[i, ])
+
+# Sajnos csak akkor látszik jól, ha az m_osz értékét 10 000-re emelem.
+m_sd_sor
+
+is.vector(m_sd_sor)
+
+#---------------------------IV.3 feladat---------------------------
+# Számold ki az apply függvénycsalád egy tagjával minden sor szórását! 
+# A végeredmény legyen egy vektor.
+
+m_sd_sor_apply <- apply(m, 1, sd)
+
+is.vector(m_sd_sor_apply)
+
+#---------------------------IV.4 feladat---------------------------
+# Normalizáld a mátrix értékeit -1-től 1-ig tartó intervallumra és 
+# nézd meg a sorok átlagát!
+
+m_me_sor <- apply(m, 1, mean)
+normalized <- (m - m_me_sor) / m_sd_sor
+normalized
+
+
 
